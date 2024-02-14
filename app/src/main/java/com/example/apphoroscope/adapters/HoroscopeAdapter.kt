@@ -1,5 +1,6 @@
 package com.example.apphoroscope.adapters
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,15 +22,22 @@ class HoroscopeAdapter(val items:List<Horoscope>) : RecyclerView.Adapter<Horosco
     }
 
     override fun onBindViewHolder(holder: HoroscopeViewHolder, position: Int) {
-        holder.nameTextView.text = holder.itemView.context.getString(items[position].name)
+        holder.render(items[position])
     }
 
 }
 
 class HoroscopeViewHolder (view: View) : RecyclerView.ViewHolder(view) {
 
-    val nameTextView:TextView = view.findViewById(R.id.nameTextView)
-    val imageView: ImageView =view.findViewById(R.id.imageView)
+    val nameTextView: TextView = view.findViewById(R.id.nameTextView)
+    val imageView: ImageView = view.findViewById(R.id.imageView)
 
-
+    fun render(horoscope: Horoscope) {
+        val context: Context = itemView.context
+        nameTextView.text = context.getString(horoscope.name)
+        imageView.setImageResource(horoscope.image)
+    }
 }
+
+
+

@@ -13,7 +13,9 @@
     <string name="horoscope_name_aquarius">Aquarius</string>
     <string name="horoscope_name_piesces">Piesces</string>
     <string name="horoscope_List">Horoscopolista</string>
-
+    <string name="aries">Aries</string>
+    <string name="horoscopo">Horoscopo</string>
+    <string name="horoscope">Horoscope</string>
 
 
 </resources>
