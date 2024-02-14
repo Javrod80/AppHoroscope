@@ -1,7 +1,8 @@
-package com.example.apphoroscope
+package com.example.apphoroscope.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.apphoroscope.R
 
 class MainActivity : AppCompatActivity() {
 

@@ -3,6 +3,7 @@ package com.example.apphoroscope.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.apphoroscope.R
@@ -28,5 +29,7 @@ class HoroscopeAdapter(val items:List<Horoscope>) : RecyclerView.Adapter<Horosco
 class HoroscopeViewHolder (view: View) : RecyclerView.ViewHolder(view) {
 
     val nameTextView:TextView = view.findViewById(R.id.nameTextView)
+    val imageView: ImageView =view.findViewById(R.id.imageView)
+
 
 }
