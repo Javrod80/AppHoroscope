@@ -7,7 +7,7 @@ sealed class Horoscope (val image : Int , val name : Int) {
     object Aries : Horoscope (R.drawable.aries_icon,R.string.horoscope_name_aries)
     object Taurus : Horoscope(R.drawable.taurus_tauro, R.string.horoscope_name_taurus)
     object Gemini : Horoscope(R.drawable.gemini_icon, R.string.horoscope_name_gemini)
-    object Cancer : Horoscope(R.drawable.cancer_icon, R.string.horoscope_name_cancer)
+    object Cancer : Horoscope(R.drawable.cancer_zodiac_icon, R.string.horoscope_name_cancer)
     object Leo : Horoscope(R.drawable.leo_icon, R.string.horoscope_name_leo)
     object Virgo : Horoscope(R.drawable.virgo_icon, R.string.horoscope_name_virgo)
     object Libra : Horoscope(R.drawable.libra_icon, R.string.horoscope_name_libra)

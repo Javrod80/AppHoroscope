@@ -4,15 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.MainActivity"
+    tools:context=".activities.DetailActivity"
     android:orientation="horizontal">
 
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/horoscopeList"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+    <TextureView
+        android:id="@+id/horoscopeTextView"
+        android:layout_width="200dp"
+        android:layout_height="55dp"
+        android:background="@color/backPrincipal" />
 
 
 

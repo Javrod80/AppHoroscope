@@ -13,9 +13,10 @@
     <string name="horoscope_name_aquarius">Aquarius</string>
     <string name="horoscope_name_piesces">Piesces</string>
     <string name="horoscope_List">Horoscopolista</string>
-    <string name="aries">Aries</string>
-    <string name="horoscopo">Horoscopo</string>
-    <string name="horoscope">Horoscope</string>
+    <string name="aries" translatable="false">Aries</string>
+    <string name="horoscopo" translatable="false">Horoscopo</string>
+    <string name="horoscope" translatable="false">Horoscope</string>
+    <string name="Tu_Horoscopo" translatable="false">Tu Horoscopo</string>
 
 
 </resources>

@@ -1,12 +1,16 @@
 package com.example.apphoroscope.activities
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.apphoroscope.R
 import com.example.apphoroscope.adapters.HoroscopeAdapter
+import com.example.apphoroscope.adapters.onClickListener
 import com.example.apphoroscope.data.Horoscope
+import java.text.FieldPosition
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,16 +40,34 @@ class MainActivity : AppCompatActivity() {
         initView()
 
         getString(R.string.horoscope_name_aries)
+
+        onItemClickListener()
     }
 
     private fun initView() {
         recyclerView = findViewById(R.id.horoscopeList)
 
-        adapter = HoroscopeAdapter(horoscopeList)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
 
+        HoroscopeAdapter = HoroscopeAdapter(horoscopeList) {
+            onClickListener(it)
+        }
+
     }
+
+
+
+}
+private fun onItemClickListener (position:Int){
+
+    val horoscope:Horoscope = horoscopeList[position]
+    val context:Context = this
+    val intent: Intent (packageContext:this,DetailActivity::class.java)
+    intent.putExtra(name: "HOROSCOPE_NAME", getString(horoscope.name))
+    startActivity(intent)
+
+    )
 }
 
 
