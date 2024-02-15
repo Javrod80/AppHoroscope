@@ -1,13 +1,13 @@
 package com.example.apphoroscope.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.example.apphoroscope.R
-import com.example.apphoroscope.data.Horoscope
-import com.example.apphoroscope.data.Horoscope.Aquarius.name
 
 class DetailActivity : AppCompatActivity() {
+
+
 
     private lateinit var horoscopeTextView: TextView
 
@@ -17,7 +17,7 @@ class DetailActivity : AppCompatActivity() {
 
         horoscopeTextView = findViewById(R.id.horoscopeTextView)
 
-        val name:String = intent.getStringExtra(HOROSCOPE_NAME")
+        val name = intent.getStringExtra("HOROSCOPE_NAME")
 
         horoscopeTextView.text = name
     }
