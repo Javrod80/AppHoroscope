@@ -25,7 +25,7 @@ class HoroscopeAdapter(val items: List<Horoscope> = listOf(), val onClickListene
 
     override fun onBindViewHolder(holder: HoroscopeViewHolder, position: Int) {
         holder.render(items[position])
-        holder.imageView.setOnClickListener{onClickListener(position)}
+        //holder.imageView.setOnClickListener{onClickListener(position)}
         holder.itemView.setOnClickListener { onClickListener (position)}
     }
 }
