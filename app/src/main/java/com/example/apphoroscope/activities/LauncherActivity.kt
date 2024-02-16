@@ -9,13 +9,13 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 class LauncherActivity : AppCompatActivity() {
 
 
-    private val boton1 : FloatingActionButton = findViewById(R.id.Boton1)
+    private lateinit var boton1 : FloatingActionButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_launcher)
 
-
+        boton1 = findViewById(R.id.Boton1)
 
         listerer()
 
@@ -24,10 +24,9 @@ class LauncherActivity : AppCompatActivity() {
     private fun listerer() {
 
         boton1.setOnClickListener() {
-
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
-        val intent = Intent(this, LauncherActivity::class.java)
-        startActivity(intent)
 
 
     }
