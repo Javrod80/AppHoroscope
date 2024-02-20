@@ -2,14 +2,21 @@ package com.example.apphoroscope.activities
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.MenuItem
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.apphoroscope.R
+import com.example.apphoroscope.data.Horoscope
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class LauncherActivity : AppCompatActivity() {
 
 
     private lateinit var boton1 : FloatingActionButton
+    private lateinit var horoscopeTextView: TextView
+    private lateinit var horoscopedatehoroscope: TextView
+    private lateinit var horoscopeDetailView :TextView
+    private lateinit var horoscope: Horoscope
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,7 +24,12 @@ class LauncherActivity : AppCompatActivity() {
 
         boton1 = findViewById(R.id.Boton1)
 
+
+
         listerer()
+
+        initView()
+
 
     }
 
@@ -30,4 +42,38 @@ class LauncherActivity : AppCompatActivity() {
 
 
     }
+    private fun initView() {
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true);
+        //supportActionBar?.setDisplayShowHomeEnabled(true);
+
+        supportActionBar?.setTitle(horoscope.name);
+        //supportActionBar?.setSubtitle(horoscope.dates);
+
+        // Set icon
+        //supportActionBar?.setLogo(horoscope.image);
+
+        horoscopeTextView = findViewById(R.id.horoscopeTextView)
+        horoscopedatehoroscope=findViewById(R.id.DateHoroscope)
+        horoscopeDetailView = findViewById(R.id.horoscopeDetailView)
+
+
+
+
+        horoscopeTextView.text = getString(horoscope.name)
+
+    }
+
+    // this event will enable the back
+    // function to the button on press
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                finish()
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
 }
