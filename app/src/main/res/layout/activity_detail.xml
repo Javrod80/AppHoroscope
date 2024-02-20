@@ -1,27 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".activities.DetailActivity"
-    android:orientation="horizontal">
+    android:background="@color/color2"
+    android:orientation="vertical"
+    tools:context=".activities.DetailActivity">
 
     <TextView
         android:id="@+id/horoscopeTextView"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:background="@color/backPrincipal"
-        android:textSize="45dp"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:textSize="45sp" />
+
 
     <TextView
+        android:id="@+id/DateHoroscope"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="28dp"
-        android:id="@+id/horoscopeDetailView"
-        tools:ignore="MissingConstraints" />
+        android:background="?android:attr/textColorLinkInverse"
+        android:gravity="center"
+        android:text="Horoscopo del día:"
+        android:textSize="30sp" />
 
+
+    <TextView
+        android:id="@+id/horoscopeDetailView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/material_dynamic_secondary80"
+        android:textSize="28sp"
+        tools:ignore="MissingConstraints" />
 
 
 </LinearLayout>

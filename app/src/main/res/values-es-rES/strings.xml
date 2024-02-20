@@ -18,4 +18,16 @@
     <string name="horoscopo">Horoscopo</string>
     <string name="horoscope">Horoscope</string>
     <string name="Tu_Horoscopo">Tu Horoscopo</string>
+    <string name="horoscope_date_aries">día_aries</string>
+    <string name="horoscope_date_taurus">día_tauro</string>
+    <string name="horoscope_date_gemini">día_gemini</string>
+    <string name="horoscope_date_cancer">día_cancer</string>
+    <string name="horoscope_date_leo">dia_leo</string>
+    <string name="horoscope_date_virgo">dia_virgo</string>
+    <string name="horoscope_date_libra">día_libra</string>
+    <string name="horoscope_date_scorpio">día_escorpio</string>
+    <string name="horoscope_date_sagittarius">día_sagitario</string>
+    <string name="horoscope_date_capriconr">dia_capricornio</string>
+    <string name="horoscope_date_aquarius">día_aquario</string>
+    <string name="horoscope_date_piesces">día_piscis</string>
 </resources>

@@ -8,31 +8,18 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.apphoroscope.R
 import com.example.apphoroscope.adapters.HoroscopeAdapter
 import com.example.apphoroscope.data.Horoscope
+import com.example.apphoroscope.data.HoroscopeCall
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 class MainActivity : AppCompatActivity() {
-
-    private var horoscopeList: List<Horoscope> = listOf(
-        Horoscope.Aries,
-        Horoscope.Taurus,
-        Horoscope.Gemini,
-        Horoscope.Cancer,
-        Horoscope.Leo,
-        Horoscope.Virgo,
-        Horoscope.Libra,
-        Horoscope.Scorpio,
-        Horoscope.Sagittarius,
-        Horoscope.Capricorn,
-        Horoscope.Aquarius,
-        Horoscope.Pisces
-    )
+    private val horoscopeList : List<Horoscope> = HoroscopeCall ().getHoroscopes()
 
     private lateinit var adapter: HoroscopeAdapter
 
     private lateinit var recyclerView: RecyclerView
 
-    lateinit var boton1: FloatingActionButton
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 
         initView()
 
-        getString(R.string.horoscope_name_aries)
+        //getString(R.string.horoscope_name_aries)
 
 
     }
@@ -65,7 +52,7 @@ class MainActivity : AppCompatActivity() {
         val horoscope: Horoscope = horoscopeList[position]
 
         val intent = Intent(this, DetailActivity::class.java)
-        intent.putExtra("HOROSCOPE_NAME", getString(horoscope.name))
+        intent.putExtra("HOROSCOPE_ID", horoscope.id)
         startActivity(intent)
 
     }
