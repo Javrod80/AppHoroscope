@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:appcompat="http://schemas.android.com/apk/res-auto">
 
-    <item
-        android:id="@+id/search_menu"
-        android:title="@string/search_menu"
-        android:icon="@android:drawable/ic_menu_search"
-        appcompat:actionViewClass="androidx.appcompat.widget.SearchView"
-        app:showAsAction="collapseActionView|always"/>
 
-</menu>
+        <item
+            android:id="@+id/menu_search"
+            android:title="@string/menu_search"
+            android:icon="@drawable/search_globe_svgrepo_com"
+            appcompat:actionViewClass="androidx.appcompat.widget.SearchView"
+            app:showAsAction="always"
+            tools:ignore="AlwaysShowAction" />
+
+
+    </menu>
+

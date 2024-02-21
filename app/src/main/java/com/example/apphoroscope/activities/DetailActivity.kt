@@ -1,14 +1,14 @@
 package com.example.apphoroscope.activities
 
+
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.SearchView
 import com.example.apphoroscope.R
-import com.example.apphoroscope.adapters.HoroscopeAdapter
+import com.example.apphoroscope.R.id.menu_search
 import com.example.apphoroscope.data.Horoscope
 import com.example.apphoroscope.data.HoroscopeCall
 import kotlinx.coroutines.CoroutineScope
@@ -19,26 +19,33 @@ class DetailActivity : AppCompatActivity() {
 
 
     private var horoscopeId: String? = null
-    private lateinit var horoscope:Horoscope
-    private var horoscopeList : List<Horoscope> = HoroscopeCall ().getHoroscopes()
+    private lateinit var horoscope: Horoscope
 
+    private lateinit var horoscopeImageView: ImageView
     private lateinit var horoscopeTextView: TextView
-    lateinit var horoscopeDatetextView: TextView
-    lateinit var horoscopeAdapter: HoroscopeAdapter
-
+    private lateinit var horoscopeDatetextView: TextView
     private lateinit var horoscopeDetailView: TextView
+    private lateinit var searchView : MenuItem
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
 
+        horoscopeImageView = findViewById(R.id.horoscopeImageView)
         horoscopeTextView = findViewById(R.id.horoscopeTextView)
         horoscopeDetailView = findViewById(R.id.horoscopeDetailView)
-        horoscopeDatetextView = findViewById(R.id.horoscopeTextView)
+        horoscopeDatetextView = findViewById(R.id.DateHoroscope)
 
-        horoscopeId= intent.getStringExtra("HOROSCOPE_ID")
+
+
+        horoscopeId = intent.getStringExtra("HOROSCOPE_ID")
         horoscope = HoroscopeCall().getHoroscope(horoscopeId!!)
+
+
+        //supportActionBar?.setDisplayShowTitleEnable(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
 
 
         getHoroscopeDaily()
@@ -46,44 +53,28 @@ class DetailActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
 
-        menuInflater.inflate(R.menu.first_menu, menu)
-
-        initSearchView(menu?.findItem(R.id.menu_search))
+               menuInflater.inflate(R.menu.first_menu, menu)
+        searchView = findViewById(menu_search)
 
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
         when (item.itemId) {
             android.R.id.home -> {
                 finish()
                 return true
+
             }
         }
+
+       // when (item.itemId) {
+        //    android.R.id.menu_search -> {
+                finish()
+       //     }
+      //  }
         return super.onOptionsItemSelected(item)
-    }
-    private fun initSearchView(searchItem: MenuItem?) {
-        if (searchItem != null) {
-            var searchView = searchItem.actionView as SearchView
-
-            searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-                override fun onQueryTextSubmit(query: String?): Boolean {
-                    return false
-                }
-
-                override fun onQueryTextChange(query: String?): Boolean {
-                    if (query.isNullOrEmpty()) {
-                        horoscopeList = HoroscopeCall().getHoroscopes()
-                    } else {
-                        horoscopeList = HoroscopeCall().getHoroscopes()
-                            .filter { getString(it.name).contains(query, true) }
-                    }
-                    horoscopeAdapter.updateData(horoscopeList)
-
-                    return true
-                }
-            })
-        }
     }
 
 
