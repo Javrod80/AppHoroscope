@@ -33,8 +33,6 @@
     <string name="horoscope_date_capriconr">22 de diciembre al 19 de enero</string>
     <string name="horoscope_date_aquarius" >20 de enero al 18 de febrero</string>
     <string name="horoscope_date_piesces">19 de febrero al 20 de marzo</string>
-    <string name="horoscopo_del_d_a">Horoscopo del día:</string>
-    <string name="view">View</string>
-    <string name="menu_search" />
+    <string name="search_menu">search_menu</string>
 
 </resources>
