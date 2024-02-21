@@ -9,11 +9,11 @@ import com.example.apphoroscope.R
 import com.example.apphoroscope.adapters.HoroscopeAdapter
 import com.example.apphoroscope.data.Horoscope
 import com.example.apphoroscope.data.HoroscopeCall
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 class MainActivity : AppCompatActivity() {
-    private val horoscopeList : List<Horoscope> = HoroscopeCall ().getHoroscopes()
+
+    private var horoscopeList : List<Horoscope> = HoroscopeCall ().getHoroscopes()
 
     private lateinit var adapter: HoroscopeAdapter
 
@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 
         initView()
 
-        //getString(R.string.horoscope_name_aries)
+        getString(R.string.horoscope_name_aries)
 
 
     }
@@ -46,6 +46,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+
     private fun onItemClickListener(position: Int) {
 
 
@@ -61,6 +62,10 @@ class MainActivity : AppCompatActivity() {
 
 
 }
+
+
+
+
 
 
 

@@ -33,6 +33,13 @@ class HoroscopeCall {
     fun getHoroscope (id:String): Horoscope {
         return getHoroscopes().filter { it.id == id }.first()
     }
+    fun getHoroscope(index: Int): Horoscope {
+        return getHoroscopes()[index]
+    }
+
+    fun getHoroscopeIndex(horoscope: Horoscope): Int {
+        return getHoroscopes().indexOf(horoscope)
+    }
 
     suspend fun getHoroscopeDaily (horoscopeId :String) : String? {
 
