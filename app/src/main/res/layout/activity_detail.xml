@@ -20,8 +20,8 @@
         android:layout_gravity="center"
         android:contentDescription="@string/aries"/>
         
-        <ImageView
-            android:id="@+id/favorite"
+        <ImageButton
+            android:id="@+id/favoriteImage"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@android:drawable/btn_star_big_on"
