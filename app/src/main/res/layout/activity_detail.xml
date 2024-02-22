@@ -7,22 +7,38 @@
     android:orientation="vertical"
     tools:context=".activities.DetailActivity">
 
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center">
 
     <ImageView
         android:id="@+id/horoscopeImageView"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginVertical="8dp"
         tools:src="@drawable/aries_icon"
-        android:layout_gravity="center_horizontal"
+        android:layout_gravity="center"
         android:contentDescription="@string/aries"/>
+        
+        <ImageView
+            android:id="@+id/favorite"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@android:drawable/btn_star_big_on"
+            android:layout_gravity="bottom|end" />
+
+
+
+
+    </FrameLayout>
+
 
     <TextView
         android:id="@+id/horoscopeTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/backPrincipal"
-        android:text="@string/horoscope_date_aries"
+        android:text="@string/aries"
         android:gravity="center"
         android:textSize="25sp" />
 

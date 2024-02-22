@@ -33,8 +33,8 @@ class HoroscopeAdapter(var items: List<Horoscope> = listOf(), val onClickListene
     override fun getItemCount(): Int {
         return items.size
     }
-}
 
+}
 
 
 class HoroscopeViewHolder(view: View) : RecyclerView.ViewHolder(view) {

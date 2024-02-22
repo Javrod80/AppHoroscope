@@ -1,7 +1,9 @@
 package com.example.apphoroscope.activities
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.apphoroscope.R
@@ -12,16 +14,19 @@ class LauncherActivity : AppCompatActivity() {
 
 
     private lateinit var boton1 : FloatingActionButton
-    private lateinit var horoscopeTextView: TextView
-    private lateinit var horoscopedatehoroscope: TextView
-    private lateinit var horoscopeDetailView :TextView
-    private lateinit var horoscope: Horoscope
+    lateinit var editText : EditText
+    val userId: EditText = editText
+    val userPassword : EditText = editText
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_launcher)
 
         boton1 = findViewById(R.id.Boton1)
+        editText=findViewById(R.id.inUserId)
+        editText=findViewById(R.id.inPassword)
 
 
 
@@ -39,4 +44,13 @@ class LauncherActivity : AppCompatActivity() {
 
 
     }
+
+
+
+
+
+
+
+
+
 }
