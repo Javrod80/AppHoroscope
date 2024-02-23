@@ -14,9 +14,9 @@ class LauncherActivity : AppCompatActivity() {
 
 
     private lateinit var boton1 : FloatingActionButton
-    lateinit var editText : EditText
-    val userId: EditText = editText
-    val userPassword : EditText = editText
+    //lateinit var editText : EditText
+    //val userId: EditText = editText
+    //val userPassword : EditText = editText
 
 
 
@@ -25,8 +25,8 @@ class LauncherActivity : AppCompatActivity() {
         setContentView(R.layout.activity_launcher)
 
         boton1 = findViewById(R.id.Boton1)
-        editText=findViewById(R.id.inUserId)
-        editText=findViewById(R.id.inPassword)
+        //editText=findViewById(R.id.inUserId)
+        //editText=findViewById(R.id.inPassword)
 
 
 
